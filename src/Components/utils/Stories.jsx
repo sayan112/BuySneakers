@@ -5,6 +5,7 @@ import "@splidejs/react-splide/css";
 import { ClockIcon, HashtagIcon, HeartIcon } from '@heroicons/react/24/solid';
 
 const Stories = ({ story :{title, news} }) => {
+  
         const splideOptions = {
   
             perPage: 4,
@@ -60,7 +61,9 @@ const Stories = ({ story :{title, news} }) => {
                   <h1 className="text-base font-semibold lg:text-sm ">
                     {val.title}
                   </h1>
-                  <p className="text-sm text-justify lg:text-xs">{val.text}</p>
+                  <p className="text-base text-justify lg:text-sm font2 font-light opacity-90">
+                    {val.text}
+                  </p>
                 </div>
                 <div className=" flex items-center justify-center px-4 w-full">
                   <a

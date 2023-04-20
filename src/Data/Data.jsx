@@ -42,7 +42,7 @@ const heroapi = {
     { imgsrc: vcover3, clip: clip },
   ],
   sociallinks: [
-    { icon: facebook },
+    { icon: facebook  },
     { icon: messenger },
     { icon: instagram },
     { icon: twitter },

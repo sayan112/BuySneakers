@@ -3,6 +3,7 @@ import Title from './Title'
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { ClockIcon, HashtagIcon, HeartIcon } from '@heroicons/react/24/solid';
+ import {truncate} from "lodash"
 
 const Stories = ({ story :{title, news} }) => {
   
@@ -62,14 +63,15 @@ const Stories = ({ story :{title, news} }) => {
                     {val.title}
                   </h1>
                   <p className="text-base text-justify lg:text-sm font2 font-light opacity-90">
-                    {val.text}
+                    {truncate(val.text,{length:175})}
                   </p>
                 </div>
                 <div className=" flex items-center justify-center px-4 w-full">
                   <a
-                    href={val.href}
-                    target="blank"
-                    className="w-full bg-gradient-to-b from-slate-900 to-black shadow-md shadow-black text-center text-slate-200 py-1.5 button-theme"
+                     href={val.url}
+              
+                    target="_blank"
+                    className="w-full bg-gradient-to-b from-slate-900 to-black shadow-md shadow-black text-center text-slate-200 py-1.5 button-theme cursor-pointer"
                   >
                     {val.btn}
                   </a>

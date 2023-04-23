@@ -24,7 +24,7 @@ const Cart = () => {
             : "opacity-0 invisible translate-x-8"
         }`}
       >
-           <div
+        <div
           className={`blur-effect-theme duration-500 h-screen max-w-xl w-full absolute right-0 ${
             ifCartState
               ? "opacity-100 visible translate-x-0"
@@ -32,7 +32,7 @@ const Cart = () => {
           }`}
         >
           <CartCount onCartToggle={onCartToggle} />
-          <CartEmpty />
+          <CartEmpty onCartToggle={onCartToggle} />
           <Cartitem />
         </div>
       </div>

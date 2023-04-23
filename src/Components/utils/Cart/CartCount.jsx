@@ -9,24 +9,21 @@ const CartCount = ({onCartToggle}) => {
             className="grid items-center cursor-pointer"
             onClick={onCartToggle}
           >
-            <ChevronDoubleLeftIcon className="w-5 h-5 text-slate-900 hover:text-orange-500 storke-[2]" />
+            <ChevronDoubleLeftIcon className="w-5 h-5 text-[#ff527b] hover:text-orange-500 storke-[2]" />
           </div>
           <div className="grid items-center ">
-            <h1 className="text-base font-medium text-slate-900 mr-2">
+            <h1 className="text-base font-medium text-[#846c73] mr-2">
               Your Cart
-              <span className="bg-theme-cart rounded px-1 py-0.5 text-slate-100 font-normal text-xs ml-1">
+              <span className="bg-gradient-to-b from-[#85787c] to-[#9da0a7] shadow-sm shadow-gray-500 rounded px-1 py-0.5 text-white font-normal text-xs ml-1">
                 (items)
               </span>
             </h1>
           </div>
         </div>
         <div className="flex items-center">
-          <button
-            type="button"
-            className=" rounded bg-theme-cart active:scale-90 p-0.5"
-          >
+          <button type="button" className=" rounded  active:scale-90 p-0.5">
             <XMarkIcon
-              className="w-5 h-5 text-white storke-[2]"
+              className="w-5 h-5 text-white rounded-sm bg-[#ff527b]"
               onClick={onCartToggle}
             />
           </button>

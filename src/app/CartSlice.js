@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+ import { toast } from "react-hot-toast";
 const initialState={
     cartState:false,
-    cartItems:[],
+    cartItems:localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")):[]
 }
  const CartSlice = createSlice({
    initialState,
@@ -14,7 +15,19 @@ state.cartState=action.payload.cartState;
 state.cartState = action.payload.cartState;
    },
     setAddCartItems:(state,action)=>{
-         state.cartItems.push(action.payload);
+         const itemIndex=state.cartItems.findIndex((item)=>item.id===action.payload.id);
+          if(itemIndex>=0)
+          {
+            state.cartItems[itemIndex].cartQuantity+=1;
+              toast.success(`another ${action.payload.title} added`);
+          }
+          else{
+            const temp={...action.payload,cartQuantity:1}
+          state.cartItems.push(temp);
+        toast.success(`${action.payload.title} add to the Cart`);
+          }
+           localStorage.setItem("cart",JSON.stringify(state.cartItems));
+       
     }
 } 
  });

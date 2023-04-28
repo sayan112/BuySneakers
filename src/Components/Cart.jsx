@@ -3,11 +3,12 @@ import CartCount from './utils/Cart/CartCount'
 import CartEmpty from "./utils/Cart/CartEmpty";
 import Cartitem from "./utils/Cart/CartItem";
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCartState, setCloseCart } from '../app/CartSlice.js';
+import { selectCartIems, selectCartState, setCloseCart } from '../app/CartSlice.js';
+import CartItem from './utils/Cart/CartItem';
 const Cart = () => {
    const dispatch = useDispatch();
     const ifCartState=useSelector(selectCartState);
-     console.log(ifCartState);
+    const cartItems= useSelector(selectCartIems);
      const onCartToggle = () => {
        dispatch(
          setCloseCart({
@@ -32,8 +33,18 @@ const Cart = () => {
           }`}
         >
           <CartCount onCartToggle={onCartToggle} />
-          <CartEmpty onCartToggle={onCartToggle} />
-          <Cartitem />
+          {cartItems?.length === 0 ? (
+            <CartEmpty onCartToggle={onCartToggle} />
+          ) : (
+            <>
+            <div className='flex items-start justify-start flex-col gap-y-7 lg:gap-y-5 overflow-y-scroll h-[81vh] scroll-smooth scroll-hidden'>
+              {cartItems.map((item,i)=>(
+                <CartItem key={i} item={item}/>
+
+              ))}
+            </div>
+            </>
+          )}
         </div>
       </div>
     </>

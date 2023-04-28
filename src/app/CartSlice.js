@@ -32,5 +32,7 @@ state.cartState = action.payload.cartState;
 } 
  });
  export const { setOpenCart, setCloseCart, setAddCartItems } = CartSlice.actions;
- export const selectCartState=(state)=>state.cart.cartState
+ export const selectCartState=(state)=>state.cart.cartState;
+  export const selectCartIems =(state)=>state.cart.cartItems;
+  
   export default CartSlice.reducer;

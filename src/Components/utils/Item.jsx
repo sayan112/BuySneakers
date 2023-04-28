@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+ import { useDispatch } from 'react-redux';
  import {StarIcon,ShoppingBagIcon} from "@heroicons/react/24/solid"
+import { setAddCartItems } from '../../app/CartSlice';
+
  const Item = ({
   ifexists, item: { id, color, shadow, title, text, img, btn, rating, price },
   
  }) => {
+  const dispatch = useDispatch();
+   const onAddtoCart=()=>{
+   
+    const item = { id, color, shadow, title, text, img, btn, rating, price };
+     console.log(item);
+     dispatch(setAddCartItems(item));    
+   }
    return (
      <>
        <div
@@ -38,6 +48,7 @@ import React from 'react'
                type="button"
                className="bg-white/90
              blur-effect-theme button-theme p-0.5 shadow shadow-sky-200"
+               onClick={()=>{onAddtoCart()}}
              >
                <ShoppingBagIcon className="icon-style text-slate-900" />
              </button>
@@ -59,7 +70,9 @@ import React from 'react'
              src={img}
              alt={`img/alt/imgid/${id}`}
              className={` transitions-theme hover:-rotate-12 ${
-               ifexists ? "h-auto w-64 lg:w-56 md:w-48 -rotate-[35deg]" : "h-36 w-64"
+               ifexists
+                 ? "h-auto w-64 lg:w-56 md:w-48 -rotate-[35deg]"
+                 : "h-36 w-64"
              }`}
            />
          </div>

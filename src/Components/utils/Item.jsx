@@ -1,7 +1,7 @@
 import React from 'react';
  import { useDispatch } from 'react-redux';
  import {StarIcon,ShoppingBagIcon} from "@heroicons/react/24/solid"
-import { setAddCartItems } from '../../app/CartSlice';
+import { setAddCartItems, setOpenCart } from '../../app/CartSlice';
 
  const Item = ({
   ifexists, item: { id, color, shadow, title, text, img, btn, rating, price },
@@ -11,9 +11,18 @@ import { setAddCartItems } from '../../app/CartSlice';
    const onAddtoCart=()=>{
    
     const item = { id, color, shadow, title, text, img, btn, rating, price };
-     console.log(item);
      dispatch(setAddCartItems(item));    
    }
+
+    // cart open state
+     const onCartToggle = () => {
+       dispatch(
+         setOpenCart({
+           cartState: true,
+         })
+       );
+     };
+
    return (
      <>
        <div
@@ -48,7 +57,7 @@ import { setAddCartItems } from '../../app/CartSlice';
                type="button"
                className="bg-white/90
              blur-effect-theme button-theme p-0.5 shadow shadow-sky-200"
-               onClick={()=>{onAddtoCart()}}
+               onClick={onAddtoCart}
              >
                <ShoppingBagIcon className="icon-style text-slate-900" />
              </button>
@@ -56,6 +65,7 @@ import { setAddCartItems } from '../../app/CartSlice';
                type="button"
                className="bg-white/90
              blur-effect-theme button-theme px-2 py-1 shadow shadow-sky-200 text-sm text-black"
+               onClick={()=>{onAddtoCart();onCartToggle();}}
              >
                {btn}
              </button>
@@ -81,4 +91,4 @@ import { setAddCartItems } from '../../app/CartSlice';
    );
  };
 
-export default Item
+export default Item;

@@ -74,7 +74,7 @@ const dispatch= useDispatch();
                   }`}
                 />
                 <div
-                  className={`absolute top-4 right-1 bg-white text-slate-900 shadow shadow-slate-100 w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300`}
+                  className={`absolute top-4 right-1 sm:top-4 left-0.5 bg-white text-slate-900 shadow shadow-slate-100 w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300`}
                 >
                   {totalQuantity}
                 </div>

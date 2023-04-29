@@ -26,7 +26,7 @@ const Hero = ({heroapi : {title,subtitle,btntext,img,sociallinks,videos}}) => {
             }
           </div>
           <div className='grid items-center absolute top-[33vh] lg:top-[27vh] right-0 gap-3'>{sociallinks.map((val,i)=>(
-            <SocialLink key={i} icon={val.icon}/>
+            <SocialLink key={i} icon={val.icon} url={val.url}/>
           ))
           }</div>
         </div>

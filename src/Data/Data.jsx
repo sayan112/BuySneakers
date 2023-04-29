@@ -42,11 +42,11 @@ const heroapi = {
     { imgsrc: vcover3, clip: clip },
   ],
   sociallinks: [
-    { icon: facebook  },
-    { icon: messenger },
-    { icon: instagram },
-    { icon: twitter },
-    { icon: youtube },
+    { icon: facebook, url: "https://www.facebook.com/sayan.maitra.5437/" },
+    { icon: messenger, url: "https://www.facebook.com/sayan.maitra.5437/" },
+    { icon: instagram, url: "https://www.instagram.com/sayan_11_maitra/" },
+    { icon: twitter, url: "https://twitter.com/SayanMaitra12" },
+    { icon: youtube, url: "https://www.youtube.com/@nike" },
   ],
 };
 

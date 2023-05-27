@@ -13,17 +13,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
  
 const router = createBrowserRouter([
   {
-    path: "/dashboard",
+    path: "/",
     element: <App />,
   },
-  {
-    path: "/",
-    element: <Login />,
-  },
-  {
-    path: "/signup",
-    element: <Signup />,
-  },
+  // {
+  //   path: "/",
+  //   element: <Login />,
+  // },
+  // {
+  //   path: "/signup",
+  //   element: <Signup />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

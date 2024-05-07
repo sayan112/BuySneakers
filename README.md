@@ -45,4 +45,6 @@ This project is licensed under the [MIT License](LICENSE).
 - Special thanks to Nike for inspiring us with their iconic sneaker designs.
 - Thanks to the open-source community for providing valuable tools and resources.
 
-👟👟👟
+https://github.com/sayan112/BuySneakers/blob/master/src/assets/Buysnekar1.png
+https://github.com/sayan112/BuySneakers/blob/master/src/assets/Buysnekar2.png
+https://github.com/sayan112/BuySneakers/blob/master/src/assets/Buysnekar3.png

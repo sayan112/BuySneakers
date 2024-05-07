@@ -45,14 +45,23 @@ This project is licensed under the [MIT License](LICENSE).
 - Special thanks to Nike for inspiring us with their iconic sneaker designs.
 - Thanks to the open-source community for providing valuable tools and resources.
 
+## Acknowledgements
+
+- Special thanks to Nike for inspiring us with their iconic sneaker designs.
+- Thanks to the open-source community for providing valuable tools and resources.
+
 ## Screenshots
 
+![Hero Section](https://github.com/sayan112/BuySneakers/raw/master/src/assets/HeroSectionBuySneaker.png)
+
+
 ![Screenshot 1](https://github.com/sayan112/BuySneakers/raw/master/src/assets/Buysnekar1.png)
-*Screenshot 1: Placeholder text for description*
+
 
 ![Screenshot 2](https://github.com/sayan112/BuySneakers/raw/master/src/assets/Buysnekar2.png)
-*Screenshot 2: Placeholder text for description*
+
 
 ![Screenshot 3](https://github.com/sayan112/BuySneakers/raw/master/src/assets/Buysnekar3.png)
-*Screenshot 3: Placeholder text for description*
+
+
 
